@@ -31,16 +31,18 @@ module.exports = function( grunt ) {
 		// See https://github.com/jquery/sizzle/wiki/Sizzle-Documentation#browsers
 
 		browsers.desktop = [
-			"bs_chrome-37", "bs_chrome-38",
+			"bs_chrome-38", "bs_chrome-39",
 
 			"bs_firefox-24", "bs_firefox-31", // Firefox ESR
-			"bs_firefox-32", "bs_firefox-33",
+			"bs_firefox-34", "bs_firefox-35",
 
 			"bs_ie-9", "bs_ie-10", "bs_ie-11",
 
-			"bs_opera-24", "bs_opera-25",
+			"bs_opera-25", "bs_opera-26",
 
-			"bs_safari-6.0", "bs_safari-6.1", "bs_safari-7.0"
+			"bs_yandex-14.5",
+
+			"bs_safari-6.0", "bs_safari-6.1", "bs_safari-7.0", "bs_safari-8.0"
 		];
 
 		browsers.ios = [ "bs_ios-5.1", "bs_ios-6.0", "bs_ios-7.0" ];
@@ -256,12 +258,13 @@ module.exports = function( grunt ) {
 	grunt.registerTask( "tests", isBrowserStack ? [
 		"karma:phantom", "karma:desktop",
 
-		"karma:ios", "karma:android",
+		"karma:ios",
 
 		"karma:oldIe", "karma:oldFirefox", "karma:oldChrome",
-		"karma:oldSafari", "karma:oldOpera",
+		"karma:oldSafari", "karma:oldOpera"
 
-		"karma:oldAndroid"
+		// See #314 :-(
+		// "karma:android", "karma:oldAndroid"
 	] : "karma:phantom" );
 
 	grunt.registerTask( "build", [ "lint", "compile", "uglify", "dist" ] );
