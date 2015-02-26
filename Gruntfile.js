@@ -48,8 +48,7 @@ module.exports = function( grunt ) {
 		browsers.ios = [ "bs_ios-5.1", "bs_ios-6.0", "bs_ios-7.0" ];
 		browsers.android = [
 			"bs_android-4.0", "bs_android-4.1", "bs_android-4.2",
-			"bs_android-4.3", "bs_android-4.4", "bs_prash-nexus-5",
-			"bs_prash-nexus-6", "bs_prash-nexus-9", "bs_prash-htc-m8"
+			"bs_android-4.3", "bs_android-4.4"
 		];
 
 		browsers.old = {
