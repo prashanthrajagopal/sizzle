@@ -250,5 +250,29 @@ module.exports = {
 		device: "Samsung Galaxy S5",
 		os: "android",
 		os_version: "4.4"
+	},
+	"bs_prash-nexus-5": {
+		base: "BrowserStack",
+		device: "Google Nexus 5",
+		os: "android",
+		os_version: "5.0"
+	},
+	"bs_prash-nexus-6": {
+		base: "BrowserStack",
+		device: "Google Nexus 6",
+		os: "android",
+		os_version: "5.0"
+	},
+	"bs_prash-nexus-9": {
+		base: "BrowserStack",
+		device: "Google Nexus 9",
+		os: "android",
+		os_version: "5.0"
+	},
+	"bs_prash-htc-m8": {
+		base: "BrowserStack",
+		device: "HTC One M8",
+		os: "android",
+		os_version: "4.4"
 	}
 };
